@@ -1,0 +1,29 @@
+.offer
+	height: calc( 100vh - 99px )
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	position: relative
+	margin-bottom: 80px
+	@include media-breakpoint-down(lg)
+		margin-bottom: 48px
+	&__title
+		margin-top: calc( 100vh - 500px )
+		margin-left: 120px
+		background-color: #808080
+		display: inline-block
+		font-size: 96px
+		color: #fff
+		padding: 5px
+		@include media-breakpoint-down(lg)
+			font-size: 48px
+			position: absolute
+			bottom: 145px
+			text-align: center
+		@include media-breakpoint-down(md)
+			margin-left: 50px
+		@include media-breakpoint-down(sm)
+			margin-left: 15px
+			margin-right: 15px
+		span
+			color: #333333

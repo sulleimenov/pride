@@ -1,0 +1,73 @@
+.contact-form
+	overflow: hidden
+	text-align: center
+	background-image: url(../images/bg-form.jpg)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 110px 0
+	position: relative
+	@include media-breakpoint-down(lg)
+		padding: 48px 0
+	&::after
+		content: ''
+		position: absolute
+		left: -200px
+		top: 0
+		width: 610px
+		height: 610px
+		background-image: url(../images/left-bg.png)
+		@include media-breakpoint-down(lg)
+			display: none
+	&::before
+		content: ''
+		position: absolute
+		right: -200px
+		top: 0
+		width: 610px
+		height: 610px
+		background-image: url(../images/right-bg.png)
+		@include media-breakpoint-down(lg)
+			display: none
+	&__title
+		margin-bottom: 40px
+		font-size: 64px
+		@include media-breakpoint-down(lg)
+			font-size: 32px
+			margin-bottom: 24px
+	&__subtitle
+		font-size: 32px
+		margin-bottom: 40px
+		@include media-breakpoint-down(lg)
+			font-size: 24px
+			margin-bottom: 24px
+.form
+	display: flex
+	flex-direction: column
+	gap: 12px
+	max-width: 491px
+	margin: 0 auto
+	input
+		border-radius: 50px
+		background: rgba(51, 51, 51, 0.80)
+		padding: 12px 32px
+		color: rgba(255, 255, 255, 0.60)
+		border: none
+		font-size: 16px
+		font-family: 'Inter', sans-serif
+		&::placeholder
+			color: #fff
+	input[type="submit"]
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $dark
+		background-color: #fff
+		height: 58px
+		max-width: 250px
+		margin: 0 auto
+		margin-top: 40px
+		width: 100%
+		font-size: 16px
+		@include media-breakpoint-down(lg)
+			margin-top: 24px

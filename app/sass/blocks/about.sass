@@ -1,0 +1,35 @@
+.about
+	margin-bottom: 100px
+	&__inner
+		border: 1px solid rgba(51, 51, 51, 0.40)
+		padding: 72px 88px
+		@include media-breakpoint-down(lg)
+			padding: 24px
+			text-align: center
+	&__title
+		font-size: 64px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 73px
+		position: relative
+		@include media-breakpoint-down(lg)
+			flex-direction: column
+			gap: 24px
+			font-size: 32px
+			img
+				order: -1
+		&::after
+			content: ''
+			width: 82px
+			height: 1px
+			background-color: $dark
+			position: absolute
+			left: 0
+			bottom: -48px
+			@include media-breakpoint-down(lg)
+				right: 0
+				margin: 0 auto
+	&__text
+		font-family: 'Inter', sans-serif
+		font-size: 20px

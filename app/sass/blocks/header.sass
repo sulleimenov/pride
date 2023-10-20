@@ -1,0 +1,64 @@
+.header
+	display: flex
+	align-items: center
+	background-color: $dark
+	text-transform: uppercase
+
+.header-menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@include media-breakpoint-down(lg)
+		flex-wrap: wrap
+	&__item
+		flex: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		gap: 15px
+		text-decoration: none
+		color: #fff
+		position: relative
+		height: 99px
+		font-size: 14px
+		@include media-breakpoint-down(lg)
+			height: 69px
+			img
+				max-width: 69px
+		@include media-breakpoint-down(md)
+			gap: 12px
+		&:not(&:last-child)
+			&::after
+				content: ''
+				width: 1px
+				height: 99px
+				background-color: #fff
+				position: absolute
+				right: 0
+				top: 0
+				@include media-breakpoint-down(lg)
+					display: none
+		&:nth-child(2)
+			@include media-breakpoint-down(lg)
+				order: -1
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3)
+			@include media-breakpoint-down(lg)
+				flex-basis: 33.33%
+				border-bottom: 1px solid #fff
+		&:nth-child(4),
+		&:nth-child(5)
+			@include media-breakpoint-down(lg)
+				flex-basis: 50%
+		&:nth-child(4)
+			&::before
+				content: ''
+				width: 1px
+				height: 48px
+				background-color: #fff
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)

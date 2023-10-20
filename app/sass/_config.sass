@@ -1,0 +1,60 @@
+$accent: #FFC060
+$fontsize: 16px
+$textcolor: #333
+$lineheight: 1.2
+$userfont: 'Oswald', sans-serif
+
+// Colors
+$dark: #333333
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// Import section
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'
+
+// Font loaded
+@mixin font($fontname, $fontstyle, $fontweight, $fonturl)
+	@font-face
+		font-family: $fontname
+		font-style: $fontstyle
+		font-weight: $fontweight
+		src: url($fonturl) format('truetype')
+
+// @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.ttf')
+// @include font('Roboto', italic, 400, '../fonts/Roboto-Italic.ttf')
+// @include font('Roboto', normal, 700, '../fonts/Roboto-Bold.ttf')
+// @include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.ttf')
+
+// General css
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+img
+	max-width: 100%
+	&.lazy
+		display: block
+		background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
